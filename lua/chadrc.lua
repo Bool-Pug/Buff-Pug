@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "mito-laser",
+	theme = "doomchad",
   transparency = true,
 
 	-- hl_override = {
@@ -51,7 +51,8 @@ M.ui = {
        treeOffsetFt = "NvimTree",
        order = { "treeOffset", "buffers", "tabs", "btns" },
        modules = nil,
-       bufwidth = 21,
+       bufwidth = 40,
+       padding = 2,
      },
 
    }
