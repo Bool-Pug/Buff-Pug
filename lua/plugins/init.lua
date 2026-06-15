@@ -44,4 +44,11 @@ return {
   		},
   	},
   },
+
+  {
+    'machakann/vim-highlightedyank',
+    event = 'TextYankPost',
+    config = function()
+    end
+  }
 }
