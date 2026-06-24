@@ -31,9 +31,9 @@ M.ui = {
          lsp = true,
        },
      },
- 
+
      telescope = { style = "bordered" }, -- borderless / bordered
- 
+
      statusline = {
        enabled = true,
        theme = "vscode", -- default/vscode/vscode_colored/minimal
@@ -43,7 +43,7 @@ M.ui = {
        order = nil,
        modules = nil,
      },
- 
+
      -- lazyload it when there are 1+ buffers
      tabufline = {
        enabled = true,

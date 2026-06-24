@@ -1,5 +1,4 @@
 return {
-
  "nvim-lua/plenary.nvim",
 
  {
@@ -50,5 +49,32 @@ return {
     event = 'TextYankPost',
     config = function()
     end
-  }
+  },
+
+  {
+    "manuuurino/autoread.nvim",
+    lazy = false,
+    config = function()
+      require("autoread").setup({
+        notify = true, -- The plugin's default notify system will now route directly to nvim-notify!
+      })
+    end,
+  },
+
+  {
+    "CRAG666/code_runner.nvim",
+    config = function()
+      require('code_runner').setup({
+        filetype = {
+          java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
+          python = "python3 -u",
+          typescript = "deno run",
+          javascript = "node",
+          cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+        },
+      })
+    end,
+    -- Lazy load on command
+    cmd = { "RunCode", "RunFile", "RunProject" },
+  },
 }
