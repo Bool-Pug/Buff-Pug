@@ -67,6 +67,7 @@ return {
       require('code_runner').setup({
         filetype = {
           java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
+          kotlin = "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
           python = "python3 -u",
           typescript = "deno run",
           javascript = "node",
